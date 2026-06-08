@@ -270,8 +270,7 @@ a,
 .cm-link,
 .markdown-preview-view .internal-link {
   color: var(--text-accent);
-  text-decoration-color: rgba(246, 150, 179, 0.42);
-  text-underline-offset: 0.18em;
+  border-bottom: 1px solid rgba(246, 150, 179, 0.42);
 }
 
 a:hover,
@@ -395,7 +394,6 @@ a.tag {
   padding: 0.12em 0.62em;
   font-family: "Emilys Candy", "Cormorant Garamond", Georgia, serif;
   font-size: 0.82em;
-  text-decoration: none;
 }
 
 input[type="checkbox"] {
@@ -445,18 +443,19 @@ input[type="checkbox"]:checked {
   background-color: rgba(229, 230, 225, 0.055);
 }
 
-.cm-selectionBackground,
-::selection {
-  background: var(--text-selection) !important;
+.markdown-source-view.mod-cm6 .cm-selectionBackground,
+.markdown-preview-view ::selection,
+.markdown-source-view.mod-cm6 ::selection {
+  background-color: var(--text-selection);
 }
 
-.cm-cursor {
-  border-left-color: var(--alice-pink) !important;
+.markdown-source-view.mod-cm6 .cm-editor .cm-cursor {
+  border-left-color: var(--alice-pink);
 }
 
-.cm-gutters {
-  background: transparent !important;
-  border-right: 1px solid var(--alice-line) !important;
+.markdown-source-view.mod-cm6 .cm-editor .cm-gutters {
+  background: transparent;
+  border-right: 1px solid var(--alice-line);
   color: var(--text-faint);
 }
 
