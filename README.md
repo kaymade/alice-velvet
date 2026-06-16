@@ -1,3 +1,4 @@
+<img width="1672" height="941" alt="alice-velvet-screenshot" src="https://github.com/user-attachments/assets/ca53f589-0857-4a4c-84b1-090892524345" />
 # Alice Velvet
 
 Alice Velvet is a dark and light Obsidian theme inspired by a whimsical storybook tea table, velvet shadows, playing-card reds, and an Alice-in-Wonderland palette. The dark mode uses deep Onyx backgrounds, muted Wineshade panels, pale Gin Tonic text, and dramatic Claret and Red Suits accents, while the light mode softens the palette into an aged-paper workspace with Onyx text and Claret details.
