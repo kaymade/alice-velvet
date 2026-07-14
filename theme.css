@@ -588,17 +588,31 @@ mark,
 
 /* hr acts as a themed pause marker instead of a plain divider */
 
-hr {
-  border-color: transparent;
+hr,
+.markdown-rendered hr,
+.markdown-preview-view hr {
+  display: block;
+  border: 0;
   height: 2px;
   margin: 2.2em auto;
-  max-width: 18rem;
+  width: 100%;
+  max-width: 100%;
   background:
     radial-gradient(circle, var(--alice-pink) 0 2px, transparent 3px),
     linear-gradient(90deg, transparent, var(--alice-line-strong), transparent);
   background-position: center, center;
   background-repeat: no-repeat;
   background-size: 0.8rem 0.8rem, 100% 2px;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-hr {
+  width: 100%;
+  text-align: center;
+}
+
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-hr .cm-hr {
+  display: block;
+  width: 100%;
 }
 
 blockquote {
