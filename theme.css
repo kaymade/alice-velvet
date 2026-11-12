@@ -87,7 +87,8 @@ settings:
   --alice-glow: rgba(221, 20, 64, 0.2);
   --font-interface-theme: var(--alice-body-font);
   --font-text-theme: var(--alice-body-font);
-  --font-monospace-theme: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --font-monospace-theme:
+    "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
   --font-editor-theme: var(--font-text-theme);
   --file-line-width: var(--alice-note-width);
   --code-block-line-width: var(--alice-code-width);
@@ -212,7 +213,8 @@ settings:
   --alice-glow: rgba(132, 11, 42, 0.14);
   --font-interface-theme: var(--alice-body-font);
   --font-text-theme: var(--alice-body-font);
-  --font-monospace-theme: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+  --font-monospace-theme:
+    "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
   --font-editor-theme: var(--font-text-theme);
 
   --file-line-width: var(--alice-note-width);
@@ -366,20 +368,28 @@ body {
 
 .workspace .workspace-tab-header.is-active .workspace-tab-header-inner,
 .workspace .workspace-tab-header.mod-active .workspace-tab-header-inner,
-.workspace .workspace-tab-header[aria-selected="true"] .workspace-tab-header-inner {
+.workspace
+  .workspace-tab-header[aria-selected="true"]
+  .workspace-tab-header-inner {
   background: var(--alice-active-tab-background);
-  box-shadow: inset 0 2px 0 var(--alice-active-tab-border), 0 8px 18px rgba(0, 0, 0, 0.12);
+  box-shadow:
+    inset 0 2px 0 var(--alice-active-tab-border),
+    0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .workspace .workspace-tab-header.is-active .workspace-tab-header-inner-title,
 .workspace .workspace-tab-header.mod-active .workspace-tab-header-inner-title,
-.workspace .workspace-tab-header[aria-selected="true"] .workspace-tab-header-inner-title {
+.workspace
+  .workspace-tab-header[aria-selected="true"]
+  .workspace-tab-header-inner-title {
   color: var(--tab-text-color-focused-active);
 }
 
 .workspace .workspace-tab-header.is-active .workspace-tab-header-inner-icon,
 .workspace .workspace-tab-header.mod-active .workspace-tab-header-inner-icon,
-.workspace .workspace-tab-header[aria-selected="true"] .workspace-tab-header-inner-icon {
+.workspace
+  .workspace-tab-header[aria-selected="true"]
+  .workspace-tab-header-inner-icon {
   color: var(--alice-active-tab-border);
 }
 
@@ -429,7 +439,7 @@ body {
 .sidebar-widget-note,
 .sidebar-widget-note .markdown-rendered {
   font-family: var(--font-text-theme);
-  font-size: 17px;
+  font-size: var(--font-preferred-size, var(--font-text-size, 17px));
   line-height: 1.72;
 }
 
@@ -459,7 +469,8 @@ body {
 
 /* code blocks get a separate measure because long snippets are harder to scan at the normal note width */
 
-.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock {
+.markdown-source-view.mod-cm6.is-readable-line-width
+  .cm-line.HyperMD-codeblock {
   max-width: var(--code-block-line-width);
 }
 
@@ -602,7 +613,9 @@ hr,
     linear-gradient(90deg, transparent, var(--alice-line-strong), transparent);
   background-position: center, center;
   background-repeat: no-repeat;
-  background-size: 0.8rem 0.8rem, 100% 2px;
+  background-size:
+    0.8rem 0.8rem,
+    100% 2px;
 }
 
 .markdown-source-view.mod-cm6 .cm-line.HyperMD-hr {
@@ -920,7 +933,8 @@ a.tag {
   padding: 0.12em 0.62em 0.12em 0.12em;
 }
 
-.markdown-source-view.mod-cm6 .cm-hashtag:not(.cm-hashtag-begin):not(.cm-hashtag-end) {
+.markdown-source-view.mod-cm6
+  .cm-hashtag:not(.cm-hashtag-begin):not(.cm-hashtag-end) {
   border: 1px solid rgba(246, 150, 179, 0.22);
   border-radius: 999px;
   padding: 0.12em 0.62em;
@@ -1117,11 +1131,32 @@ input[type="checkbox"]:checked {
 .workspace-leaf-content[data-type="graph"] .view-content,
 .workspace-leaf-content[data-type="localgraph"] .view-content {
   background:
-    radial-gradient(circle at 18% 16%, rgba(246, 150, 179, 0.1), transparent 28%),
-    radial-gradient(circle at 82% 78%, rgba(132, 11, 42, 0.14), transparent 32%),
-    linear-gradient(135deg, var(--alice-graph-grid) 25%, transparent 25%, transparent 50%, var(--alice-graph-grid) 50%, var(--alice-graph-grid) 75%, transparent 75%, transparent),
+    radial-gradient(
+      circle at 18% 16%,
+      rgba(246, 150, 179, 0.1),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 82% 78%,
+      rgba(132, 11, 42, 0.14),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      var(--alice-graph-grid) 25%,
+      transparent 25%,
+      transparent 50%,
+      var(--alice-graph-grid) 50%,
+      var(--alice-graph-grid) 75%,
+      transparent 75%,
+      transparent
+    ),
     var(--background-primary);
-  background-size: auto, auto, 34px 34px, auto;
+  background-size:
+    auto,
+    auto,
+    34px 34px,
+    auto;
 }
 
 .workspace-leaf-content[data-type="graph"] canvas,
@@ -1311,8 +1346,12 @@ input[type="checkbox"]:checked {
 .markdown-preview-view .alice-panel {
   border-block: 1px solid var(--alice-line);
   padding: 1.2rem 0;
-  background:
-    linear-gradient(90deg, transparent, rgba(246, 150, 179, 0.06), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(246, 150, 179, 0.06),
+    transparent
+  );
 }
 
 .alice-gallery,
@@ -1366,7 +1405,6 @@ body.alice-plain-embeds .file-embed {
 
   .markdown-source-view.mod-cm6 .cm-scroller,
   .markdown-preview-view {
-    font-size: 16px;
     line-height: 1.68;
   }
 
@@ -1406,7 +1444,6 @@ body.alice-plain-embeds .file-embed {
   .popover {
     max-width: calc(100vw - 24px);
   }
-
 }
 
 /* tablet width gets its own spacing because phone rules are too tight and desktop rules are too wide */

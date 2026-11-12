@@ -49,6 +49,8 @@ These fonts are optional. The theme includes fallback font stacks and remains us
 
 Typography can also be customized through Style Settings.
 
+Note text follows Obsidian's font-size setting in Live Preview and Reading view. On mobile, it also respects your device's preferred text size.
+
 ## Responsive Design
 
 Alice Velvet includes dedicated adjustments for desktop, tablet, and mobile layouts.
@@ -98,14 +100,14 @@ These classes are optional and do not affect standard notes.
 
 ## Palette
 
-| Color | Hex |
-|---|---|
-| Onyx | `#241929` |
-| Wineshade | `#5A4864` |
-| Gin Tonic | `#E5E6E1` |
+| Color              | Hex       |
+| ------------------ | --------- |
+| Onyx               | `#241929` |
+| Wineshade          | `#5A4864` |
+| Gin Tonic          | `#E5E6E1` |
 | False Goat's Beard | `#F696B3` |
-| Red Suits | `#DD1440` |
-| Claret | `#840B2A` |
+| Red Suits          | `#DD1440` |
+| Claret             | `#840B2A` |
 
 ## Technical Design
 
