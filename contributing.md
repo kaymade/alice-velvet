@@ -21,7 +21,6 @@ Suggestions are welcome. Please describe what you want changed and why it would 
 Before opening a pull request, please make sure:
 
 - The theme still works in both dark and light mode
-- `theme.css` does not use `!important`
 - `manifest.json` remains valid JSON
 - Version numbers follow `x.y.z`
 - Changes preserve the overall Alice Velvet aesthetic
